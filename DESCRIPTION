@@ -1,0 +1,11 @@
+Package: MATH4753MCAST2024
+Type: Package
+Title: R functions from the labs
+Version: 0.1.0
+Author: Mark Castle
+Maintainer: Mark Castle <Mark.L.Castle-1@ou.edu>
+Description: MATH 4753 functions detailed from LABS.
+Encoding: UTF-8
+LazyData: true
+License: MIT + file LICENSE
+RoxygenNote: 7.3.2
