@@ -11,15 +11,16 @@
 #' myncurve(0, 1, 1)
 #' myncurve(5, 2, 3)
 myncurve = function(mu = 0, sigma = 1, a = 0){
-  curve(dnorm(x,mean=mu,sd=sigma), xlim = c(mu-3*sigma, mu + 3*sigma))
+  x = seq(-100, 100, length = 1000)
+  graphics::curve(stats::dnorm(x,mean=mu,sd=sigma), xlim = c(mu-3*sigma, mu + 3*sigma))
 
   xcurve = seq(-100, a, length = 1000)
-  ycurve = dnorm(xcurve, mean = mu, sd = sigma)
-  polygon(c(-1000, xcurve, a), c(0, ycurve, 0), col = "lightblue")
+  ycurve = stats::dnorm(xcurve, mean = mu, sd = sigma)
+  graphics::polygon(c(-1000, xcurve, a), c(0, ycurve, 0), col = "lightblue")
 
-  area = round(pnorm(a, mean = mu, sd = sigma), 4)
+  area = round(stats::pnorm(a, mean = mu, sd = sigma), 4)
 
-  text(a, 0.1, paste("P(Y <= ", a, ") = ", area))
+  graphics::text(a, 0.1, paste("P(Y <= ", a, ") = ", area))
 
   list(mu = mu, sigma = sigma, area = area)
 }

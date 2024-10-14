@@ -4,7 +4,6 @@
 #' @param iter the number of iterations
 #' @param time the time to wait between iterations
 #'
-#' @return
 #' @export
 #'
 #' @examples
@@ -17,7 +16,7 @@ mysample <- function(n, iter=10,time=0.5){
     # turn the sample into a factor
     sf=factor(s,levels=1:10)
     #make a barplot
-    barplot(table(sf)/n,beside=TRUE,col=rainbow(10),
+    graphics::barplot(table(sf)/n,beside=TRUE,col=grDevices::rainbow(10),
             main=paste("Example sample()", " iteration ", i, " n= ", n,sep="") ,
             ylim=c(0,0.2)
     )
