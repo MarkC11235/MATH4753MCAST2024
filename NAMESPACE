@@ -2,6 +2,7 @@
 
 export(myboot2)
 export(myclt)
+export(mymaxlik)
 export(myncurve)
 export(myntickets)
 export(myquadratic)
