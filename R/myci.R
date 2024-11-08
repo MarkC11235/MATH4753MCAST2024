@@ -16,4 +16,5 @@ myci <- function(x){
   t_alpha_2 <- stats::qt(1-alpha/2, df=n-1)
 
   CI <- mean_x + c(-1,1)*t_alpha_2*sd_x/sqrt(n)
+  return(CI)
 }
